@@ -1,6 +1,6 @@
 {
   "name": "sherry",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.1",
   "description": "Just a scaffolding tool",
   "repository": {
     "url": "https://github.com/ulivz/sherry.git",
