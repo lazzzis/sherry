@@ -38,6 +38,8 @@
     "parse-package-name": "^0.1.0",
     "resolve-from": "^4.0.0",
     "strip-ansi": "^5.0.0",
+    "text-table": "^0.2.0",
+    "tildify": "^1.2.0",
     "update-notifier": "^2.5.0",
     "wcwidth": "^1.0.1",
     "yarn-global": "^1.1.0"
