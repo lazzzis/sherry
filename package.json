@@ -1,9 +1,9 @@
 {
-  "name": "sao",
+  "name": "sherry",
   "version": "0.0.0-semantic-release",
-  "description": "Futuristic scaffolding tool ⚔",
+  "description": "Just a scaffolding tool",
   "repository": {
-    "url": "https://github.com/saojs/sao.git",
+    "url": "https://github.com/ulivz/sherry.git",
     "type": "git"
   },
   "main": "lib/index.js",
@@ -17,7 +17,7 @@
     "test": "npm run lint && ava",
     "lint": "xo"
   },
-  "author": "egoist <0x142857@gmail.com>",
+  "author": "ULIVZ <chl814@foxmail@foxmail.com>",
   "license": "MIT",
   "dependencies": {
     "cac": "^5.0.15",
@@ -86,9 +86,9 @@
     }
   },
   "keywords": [
-    "sao",
+    "sherry",
     "generator",
-    "egoist",
+    "ulivz",
     "yeoman",
     "template",
     "scaffold",

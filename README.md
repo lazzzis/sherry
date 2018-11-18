@@ -4,40 +4,35 @@
 
 <p align="center">
 <br>
-<a href="https://npmjs.com/package/sao"><img src="https://img.shields.io/npm/v/sao.svg?style=flat" alt="NPM version"></a> <a href="https://npmjs.com/package/sao"><img src="https://img.shields.io/npm/dm/sao.svg?style=flat" alt="NPM downloads"></a> <a href="https://circleci.com/gh/saojs/sao"><img src="https://img.shields.io/circleci/project/saojs/sao/master.svg?style=flat" alt="Build Status"></a> <a href="https://packagephobia.now.sh/result?p=sao"><img src="https://packagephobia.now.sh/badge?p=sao" alt="install size"></a> <a href="https://github.com/egoist/donate"><img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat" alt="donate"></a> <a href="https://chat.egoist.moe"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat" alt="chat"></a>
+<a href="https://npmjs.com/package/sherry"><img src="https://img.shields.io/npm/v/sherry.svg?style=flat" alt="NPM version"></a> <a href="https://npmjs.com/package/sherry"><img src="https://img.shields.io/npm/dm/sherry.svg?style=flat" alt="NPM downloads"></a> <a href="https://circleci.com/gh/ulivz/sherry"><img src="https://img.shields.io/circleci/project/ulivz/sherry/master.svg?style=flat" alt="Build Status"></a> <a href="https://packagephobia.now.sh/result?p=sherry"><img src="https://packagephobia.now.sh/badge?p=sherry" alt="install size"></a>
 </p>
 
 ## Motivation
 
-**SAO** was made because **yeoman**, while powerful, is too complex. **vue-cli**, on the other hand, is more than a scaffolding tool and lacks some important features like *unit testing*. **SAO** combines the powerful core features of **yeoman** with the simplicity of **vue-cli** into a single application.
+**Sherry** (Spanish: Jerez \[xeˈɾeθ\], Chinese: 雪莉) is a fortified wine made from white grapes that are grown near the city of Jerez de la Frontera in Andalusia, Spain.
 
-**SAO** is compatible with:
+**Sherry** is compatible with:
 
 - Regular git repo (simply download it)
-- SAO generator as git repo
-- SAO generator as npm package
-- SAO generator in local folder
+- Sherry generator as git repo
+- Sherry generator as npm package
+- Sherry generator in local folder
 
 ⚡ ️**Both repo and npm package can be used offline.**
 
 ## Quick Start
 
 ```bash
-yarn global add sao
+yarn global add sherry
 
 # An official generator for creating a Node.js project
 # Generate from git repo
-sao egoist/sao-nm my-module
-# Or from npm package (npm.im/sao-nm)
-sao nm my-module
+sherry ulviz/sherry-nm my-module
+# Or from npm package (npm.im/sherry-nm)
+sherry nm my-module
 ```
 
-For detailed usage please head to https://saojs.org
-
-## Related
-
-- [Awesome SAO](https://github.com/saojs/awesome-sao) - A curated list of delightful SAO resources.
-- [SAO articles on medium.com](https://medium.com/saojs).
+For detailed usage please head to https://sherry.ulivz.org
 
 ## Contributing
 
@@ -49,9 +44,9 @@ For detailed usage please head to https://saojs.org
 
 ## Author
 
-**SAO** © [EGOIST](https://github.com/egoist), Released under the [MIT](https://egoist.mit-license.org/) License.<br>
-Authored and maintained by EGOIST with help from contributors ([list](https://github.com/saojs/sao/contributors)).
+**Sherry** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/sherry/contributors)).
 
-> [egoist.sh](https://egoist.sh) · GitHub [@EGOIST](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)
+> GitHub [@ULIVZ](https://github.com/ulivz) · Twitter [@_ulivz](https://twitter.com/_ulivz)
 
 
