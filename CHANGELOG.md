@@ -1,3 +1,8 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/ulivz/sherry/compare/v1.0.0...v1.1.1) (2018-11-19)
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-11-18)
 
