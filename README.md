@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" src="https://github.com/sherry-lab/sherry/blob/master/.media/logo.png?raw=true" alt="">
+  <img width="100" src="https://github.com/sherry-lab/sherry/blob/master/.media/logo.png?raw=true" alt="">
 </p>
 
 <p align="center">
