@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" src="https://github.com/sherry-lab/sherry/blob/master/.media/logo.png?raw=true" alt="">
+  <img width="200" src="https://github.com/sherry-lab/sherry/blob/master/.media/logo.png?raw=true" alt="">
 </p>
 
 <p align="center">
@@ -44,9 +44,8 @@ For detailed usage please head to https://sherry.ulivz.org
 
 ## Author
 
-**Sherry** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](./LICENSE) License.<br>
+ **Sherry** © <img src="https://avatars0.githubusercontent.com/u/45209364?s=14"> [Sherry Lab](https://github.com/sherry-lab), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/sherry/contributors)).
 
-> GitHub [@ULIVZ](https://github.com/ulivz) · Twitter [@_ulivz](https://twitter.com/_ulivz)
 
 
