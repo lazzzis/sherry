@@ -1,4 +1,8 @@
 <p align="center">
+  <img width="300" src="https://github.com/sherry-lab/sherry/blob/master/.media/logo.png?raw=true" alt="">
+</p>
+
+<p align="center">
 <br>
 <a href="https://npmjs.com/package/sherry"><img src="https://img.shields.io/npm/v/sherry.svg?style=flat" alt="NPM version"></a> <a href="https://npmjs.com/package/sherry"><img src="https://img.shields.io/npm/dm/sherry.svg?style=flat" alt="NPM downloads"></a> <a href="https://circleci.com/gh/ulivz/sherry"><img src="https://img.shields.io/circleci/project/ulivz/sherry/master.svg?style=flat" alt="Build Status"></a> <a href="https://packagephobia.now.sh/result?p=sherry"><img src="https://packagephobia.now.sh/badge?p=sherry" alt="install size"></a>
 </p>
