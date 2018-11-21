@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const cac = require('cac').default
-const SAOError = require('../lib/SAOError')
+const SherryError = require('../lib/SherryError')
 const getGenerators = require('../lib/utils/getGenerators')
 const printGenerators = require('../lib/utils/printGenerators')
 
@@ -61,7 +61,9 @@ cli.command('set-alias', 'Set an alias for a generator path', input => {
   const name = input[0]
   const value = input[1]
   if (!name || !value) {
-    throw new SAOError(`Invalid arguments: sao set-alias <alias> <generator>`)
+    throw new SherryError(
+      `Invalid arguments: sao set-alias <alias> <generator>`
+    )
   }
 
   store.set(`alias.${escapeDots(name)}`, value)
