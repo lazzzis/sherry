@@ -62,7 +62,7 @@ cli.command('set-alias', 'Set an alias for a generator path', input => {
   const value = input[1]
   if (!name || !value) {
     throw new SherryError(
-      `Invalid arguments: sao set-alias <alias> <generator>`
+      `Invalid arguments: sherry set-alias <alias> <generator>`
     )
   }
 
