@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Layout from '@default-theme/Layout.vue'
+import Layout from '@vuepress/theme-default/layouts/Layout.vue'
 import VersionSelector from './VersionSelector.vue'
 export default {
   components: {
