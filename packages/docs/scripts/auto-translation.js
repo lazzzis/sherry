@@ -70,7 +70,7 @@ async function start() {
       throw e
     }
     const target = file.replace('/zh/', '/')
-    res = res.replace('] (', '](')
+    res = res.replace(/\]\s\(/g, '](')
     writeFile(target, res, 'utf-8')
     await sleep(2000)
   }
