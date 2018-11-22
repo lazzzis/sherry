@@ -102,6 +102,12 @@ cli.command('get-alias', 'Get the generator for an alias', input => {
   console.log(store.get(`alias.${escapeDots(input[0])}`))
 })
 
+cli.command('view-cache', 'Display currentcache', input => {
+  const store = require('../lib/store')
+
+  console.log(store.store)
+})
+
 cli.on('error', error => {
   return require('../lib/index').handleError(error)
 })
