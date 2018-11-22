@@ -1,5 +1,5 @@
 ---
-sidebar: auto
+Sidebar: auto
 ---
 
 # Generator Instance
@@ -69,13 +69,13 @@ Run `git init` synchonously in output directory.
 Use `npm` or `yarn` to install packages in output directory.
 
 ```ts
-function npmInstall(opts?: InstallOpts): Promise<void>
+Function npmInstall(opts?: InstallOpts): Promise<void>
 
-interface InstallOpts {
-  /* The packages to install, if omited, it will install packages in `package.json` */
-  packages?: string[]
-  /* Install packages as devDependencies, false by default */
-  saveDev?: boolean
+Interface InstallOpts {
+  /* The packages to install, if omited, it will install packages in `package.json` */
+  Package?: string[]
+  /* Install packages as devDependencies, false by default */
+  saveDev?: boolean
 }
 ```
 

@@ -7,6 +7,7 @@
   "description": "Minimalistic doc generator with Vue component based layout system",
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "init-package": "node scripts/init-package.js",
     "dev:docs": "yarn workspace docs dev",
     "build:docs": "yarn workspace docs build",
     "release": "yarn --pure-lockfile && node scripts/release.js",
@@ -26,7 +27,6 @@
     "lint-staged": "^8.0.4",
     "prettier": "^1.14.3",
     "release-it": "v7.4.8",
-    "vuepress": "^1.0.0-alpha.23",
     "xo": "^0.18.0"
   }
 }

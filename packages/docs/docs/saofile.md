@@ -1,5 +1,5 @@
 ---
-sidebar: auto
+Sidebar: auto
 ---
 
 # SAO File
@@ -25,17 +25,17 @@ The `when` property in each prompt can __also__ be a string which will be evalua
 For example:
 
 ```js{10}
-prompts: [
-  {
-    name: 'useBundler',
-    message: 'Do you want a bundler'
-  },
-  {
-    name: 'bundler',
-    type: 'list',
-    choices: ['webpack', 'parcel', 'poi'],
-    when: 'useBundler'
-  }
+Prompts: [
+  {
+    Name: 'useBundler',
+    Message: 'Do you want a bundler'
+  },
+  {
+    Name: 'bundler',
+    Type: 'list',
+    Choices: ['webpack', 'parcel', 'poi'],
+    When: 'useBundler'
+  }
 ]
 ```
 
@@ -50,7 +50,7 @@ This is a property only for SAO, it is used to store user inputs so that SAO can
 
 ### `default`
 
-When `default` is a string, you can use `{propName}` to access properties on [Generator Instance](./generator-instance.md). e.g. Use `default: '{gitUser.name}'` to set the default value to the name of the git user. If you want to disable interpolations here, use double back-slash: `\\{gitUser.name}`.
+When `default` is a string, you can use `{propName}` to access properties on [Generator Instance](./generator-instance.md). eg Use `default: '{gitUser.name}'` to set the Default value to the name of the git user. If you want to disable interpolations here, use double back-slash: `\\{gitUser.name}`.
 
 ## Actions
 
@@ -66,38 +66,37 @@ __Type__: `Action[]` | `(this: Generator) => Action[] | Promise<Action[]>`
 Add files from `template` directory to target directory.
 
 ```js
-actions: [
-  {
-    type: 'add',
-    files: '**',
-    filters: {
-      'foo.js': '!someAnswer'
-    }
-  }
+Actions: [
+  {Type: 'add',
+    Files: '**',
+    Filters: {
+      'foo.js': '!someAnswer'
+    }
+  }
 ]
 ```
 
 - __files__: One or more glob patterns, files are resolved relative to [`templateDir`](#templatedir).
 - __transform__: Enable/Disable transformer.
-  - __Default__: `true`
+  - __Default__: `true`
 - __transformInclude__: One or more glob patterns, transform specific files with the transformer.
 - __transformExclude__: One or more glob patterns, __DON'T__ transform specific files with the transformer.
-- __filters__: Exclude some files from being added. It's an object whose key is a glob pattern and the value should be either a boolean or a string which will be evaluated in the context of `answers`. 
+- __filters__: Exclude some files from being added. It's an object whose key is a glob pattern and the value should be either a boolean or a string which will be evaluated in the context of `answers`.
 
 ### `type: 'modify'`
 
 Modify files in target directory.
 
 ```js
-actions: [
-  {
-    type: 'modify',
-    files: 'package.json',
-    handler(data, filepath) {
-      data.main = './foo.js'
-      return data
-    }
-  }
+Actions: [
+  {
+    Type: 'modify',
+    Files: 'package.json',
+    Handler(data, filepath) {
+      Data.main = './foo.js'
+      Return data
+    }
+  }
 ]
 ```
 
@@ -109,13 +108,13 @@ actions: [
 Move files in target directory.
 
 ```js
-actions: [
-  {
-    type: 'move',
-    patterns: {
-      'index-*.js': 'index.js'
-    }
-  }
+Actions: [
+  {
+    Type: 'move',
+    Patterns: {
+      'index-*.js': 'index.js'
+    }
+  }
 ]
 ```
 
@@ -126,12 +125,12 @@ actions: [
 Remove files in target directory.
 
 ```js
-actions: [
-  {
-    type: 'remove',
-    files: '**/*.ts',
-    when: '!useTypescript'
-  }
+Actions: [
+  {
+    Type: 'remove',
+    Files: '**/*.ts',
+    When: '!useTypescript'
+  }
 ]
 ```
 
@@ -149,28 +148,27 @@ The working directory for file action: `add`.
 You can use the `subGenerators` option to register a list of sub generators:
 
 ```js
-module.exports = {
-  subGenerators: [
-    {
-      name: 'foo',
-      // A path to the generator, relative to the saofile
-      generator: './generators/foo'
-    },
-    {
-      name: 'bar',
-      // Or use a package, like `sao-bar` here
-      // It's also resolved relative to the saofile
-      generator: 'sao-bar'
-    }
-  ]
+Module.exports = {
+  subGenerators: [
+    {
+      Name: 'foo',
+      // A path to the generator, relative to the saofile
+      Generator: './generators/foo'
+    },
+    {Name: 'bar',
+      // Or use a package, like `sao-bar` here
+      // It's also resolved relative to the saofile
+      Generator: 'sao-bar'
+    }
+  ]
 }
 ```
 
 Then you can call these sub-generators like this:
 
 ```bash
-sao sample:foo
-sao sample:bar
+Sao sample:foo
+Sao sample:bar
 ```
 
 ## Hooks
@@ -182,16 +180,16 @@ __Type__: `(this: Generator) => Prompt<void> | void`
 Executed before prompts and actions, you can throw an error here to exit the process:
 
 ```js
-module.exports = {
-  // A generator that requires package.json in output directory
-  async prepare() {
-    const hasPkg = await this.fs.pathExists(this.resolve('package.json'))
-    if (!hasPkg) {
-      throw this.createError('Missing package.json')
-      // You can also throw new Error('...') directly
-      // While `this.createError` will only display error message without stack trace.
-    }
-  }
+Module.exports = {
+  // A generator that requires package.json in output directory
+  Async prepare() {
+    Const hasPkg = await this.fs.pathExists(this.resolve('package.json'))
+    If (!hasPkg) {
+      Throw this.createError('Missing package.json')
+      // You can also throw new Error('...') directly
+      // While `this.createError` will only display error message without stack trace.
+    }
+  }
 }
 ```
 
@@ -202,11 +200,11 @@ __Type__: `(this: Generator) => Prompt<void> | void`
 Executed when all actions are completed.
 
 ```js
-module.exports = {
-  async completed() {
-    this.gitInit()
-    await this.npmInstall()
-    this.showCompleteTips()
-  }
+Module.exports = {
+  Async completed() {
+    this.gitInit()
+    Await this.npmInstall()
+    this.showCompleteTips()
+  }
 }
 ```

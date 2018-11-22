@@ -5,25 +5,25 @@ You can test your generators with your testing framework of choice, like [AVA](h
 Before writing actual tests, you need to install `sao` and your testing frameworkin the generator as dev dependencies:
 
 ```bash
-cd my-generator
-yarn add sao ava --dev
+Cd my-generator
+Yarn add sao ava --dev
 ```
 
-Now populate `test/test.js` with following contents:
+Now populate `test/test.js` with the following contents:
 
 ```js
-const test = require('ava')
-const sao = require('sao')
+Const test = require('ava')
+Const sao = require('sao')
 
-const generator = path.join(__dirname)
+Const generator = path.join(__dirname)
 
-test('defaults', async t => {
-	// In unit tests we skip prompts and use mocked answers instead
-	// If not provided we will use the default value of the prompt
-	const mockPromptAnswers = { useRouter: true }
-	const stream = await sao.mock({ generator }, mockPromptAnswers)
-	// Check if `router.js` is in the generated files
-	t.true(stream.fileList.includes('router.js'))
+Test('defaults', async t => {
+// In unit tests we skip prompts and use mocked answers instead
+// If not provided we will use the default value of the prompt
+Const mockPromptAnswers = { useRouter: true }
+Const stream = await sao.mock({ generator }, mockPromptAnswers)
+// Check if `router.js` is in the generated files
+T.true(stream.fileList.includes('router.js'))
 })
 ```
 

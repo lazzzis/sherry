@@ -1,14 +1,14 @@
 ---
-sidebar: auto
+Sidebar: auto
 ---
 
 # API
 
 ```js
-const sao = require('sao')
+Const sao = require('sao')
 
 // Create SAO instance
-const app = sao(options)
+Const app = sao(options)
 ```
 
 ## Options

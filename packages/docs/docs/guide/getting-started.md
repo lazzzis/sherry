@@ -5,13 +5,13 @@
 SAO is a CLI library written in JavaScript, so you can install it from npm:
 
 ```bash
-npm i -g sao
+Npm i -g sao
 ```
 
-Alternatively, a lot of you may use Yarn instead:
+Alternative, a lot of you may use Yarn instead:
 
 ```bash
-yarn global add sao
+Yarn global add sao
 ```
 
 Then try the command `sao` in your terminal, if everything works fine you'd see the CLI usages.
@@ -19,7 +19,7 @@ Then try the command `sao` in your terminal, if everything works fine you'd see 
 ## Using Generators
 
 ```bash
-sao nm my-project
+Sao nm my-project
 ```
 
 By running this command, SAO will install a generator which in this case is [sao-nm](https://npm.im/sao-nm) from npm, and use it to generate files into `my-project` directory.
@@ -30,18 +30,18 @@ A generator could be one of:
 
 - __Local directory__, e.g. `sao ./path/to/my-generator`
 - __An npm package__, e.g. `sao react` will be package `sao-react`.
-  - To use an npm package that does not follow the `sao-*` naming convention, just prefix the name like this: `sao npm:foo`, then this will use the `foo` package instead of `sao-foo`.
-- __A git repository__, e.g. `sao egoist/sao-nm` will use `github.com/egoist/sao-nm`, you can use following prefixes for other git providers:
-  - `gitlab:` For GitLab.
-  - `bitbucket:` For BitBucket.
+  - To use an npm package that does not follow the `sao-*` naming convention, just prefix the name like this: `sao npm:foo`, then this will use the `foo` package instead of `sao-foo`.
+- __A git repository__, e.g. `sao egoist/sao-nm` will use `github.com/egoist/sao-nm`, you can use the following prefixes for other git providers:
+  - `gitlab:` For GitLab.
+  - `bitbucket:` For BitBucket.
 
 ### Versioning
 
 For npm package, you can use a specific verison of the generator:
 
 ```bash
-sao nm@1
-sao nm@0.2
+Sao nm@1
+Sao nm@0.2
 ```
 
 The syntax here is the same as `npm install`.
@@ -49,8 +49,8 @@ The syntax here is the same as `npm install`.
 For git repository, you can use a specific tag, commit or branch of the generator:
 
 ```bash
-sao nm#dev
-sao nm#v1.0.0
+Sao nm#dev
+Sao nm#v1.0.0
 ```
 
 ### Sub-generators
@@ -58,7 +58,7 @@ sao nm#v1.0.0
 A generator might have sub-generators, you can run them like this:
 
 ```bash
-sao nm:donate
+Sao nm:donate
 ```
 
 The part after `:` is a sub-generator called `donate`, by running this command SAO will run the sub-generator which will add a `postinstall` script in `package.json` to show donation URL.
@@ -69,4 +69,4 @@ Sub-generators are supposed to be running in an existing project, which means th
 
 ### Update Cached Generator
 
-Once you've run a generator, it will be cached locally in `~/.sao` directory. To run the same generator with an up-to-date version, you can add the `--update` or `-u` flag.
+Once you've run a generator, it will be cached locally in `~/.sao` directory. To run the same generator with an up-to-date version, you can add the `--update` or `-u` Flag.
