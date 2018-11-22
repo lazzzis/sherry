@@ -2,7 +2,7 @@
 
 ## Sherry 是什么?
 
-**Sherry** (['ʃerɪ]) 是一种白葡萄酿制而成的强化葡萄酒。在这里，Sherry 通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sao) 来帮你快速地启动一个新的项目。
+**Sherry** (['ʃerɪ]) 的原意是一种白葡萄酿制而成的葡萄酒。在这里，Sherry 通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sao) 来帮你快速地启动一个新的项目。
 
 ## 为什么不使用 Yeoman?
 

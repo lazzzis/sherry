@@ -2,7 +2,7 @@
 
 ## Sherry What?
 
-**Sherry** (['ʃerɪ]) is an intensive wine made from white grapes. Here, Sherry helps you quickly launch a new project with existing [generators] (https://github.com/sherry/awesome-sao) created by yourself.
+**Sherry** (['ʃerɪ]) is originally a wine made from white grapes. Here, Sherry helps you quickly launch a new project with existing [generators](https://github.com/sherry/awesome-sao) created by yourself.
 
 ## Why not use Yeoman?
 
