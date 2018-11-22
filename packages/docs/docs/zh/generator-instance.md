@@ -1,5 +1,5 @@
 ---
-侧边栏：自动
+sidebar: auto
 ---
 
 # Generator 实例

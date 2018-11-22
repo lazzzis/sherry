@@ -1,5 +1,5 @@
 ---
-Sidebar: Automatic
+sidebar: auto
 ---
 
 # Generator Instance
