@@ -59,10 +59,10 @@ async function start() {
   for (let file of SOURCE_FILES) {
     const content = await readFile(file, 'utf-8')
     const changed = isFileChanged(file, content)
-    if (!changed) {
-      console.log(`Skip ${relative(SOURCE_DIR, file)}`)
-      continue
-    }
+    // if (!changed) {
+    //   console.log(`Skip ${relative(SOURCE_DIR, file)}`)
+    //   continue
+    // }
     let res
     try {
       res = await serialTranslate(file, content)
@@ -72,7 +72,7 @@ async function start() {
     const target = file.replace('/zh/', '/')
     res = res.replace(/\]\s\(/g, '](')
     writeFile(target, res, 'utf-8')
-    await sleep(2000)
+    await sleep(3000)
   }
 }
 

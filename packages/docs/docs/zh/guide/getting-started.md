@@ -35,6 +35,8 @@ Generator 可以是以下之一：
   - `gitlab:` For GitLab.
   - `bitbucket:` For BitBucket.
 
+<TerminalDemo url="/images/demo.gif"/>
+
 ### 版本
 
 对于 npm 包，你可以使用这个 Generator 的某个指定版本

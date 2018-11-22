@@ -1,13 +1,13 @@
-# Creating Generators
+#创造 Generator
 
-SAO provides a generator for creating a new generator:
+Sherry provides a generator for creating a new Generator:
 
 ```bash
-Sao generator sao-sample
-# Make sure to replace `sao-sample` with your desired generator name
+Sherry generator sherry-sample
+# Make sure to replace `sherry-sample` with your desired generator name
 ```
 
-## Folder Structure
+## Directory Structure
 
 The basic folder structure is as follows:
 
@@ -17,7 +17,7 @@ The basic folder structure is as follows:
 ├── README.md
 ├── circle.yml
 ├── package.json
-├── saofile.js
+├── sherryfile.js
 ├── template
 │ ├── LICENSE
 │ ├── README.md
@@ -27,7 +27,7 @@ The basic folder structure is as follows:
 └── yarn.lock # Or package-lock.json if you don't have Yarn on your machine
 ```
 
-_ __saofile.js__:
+_ __sherryfile.js__:
 
 ```js
 Const superb = require('superb')
@@ -89,19 +89,19 @@ Module.exports = {
 }
 ```
 
-- `prompts`: CLI prompts to retrive answers from current user.
-- `actions`: A series of actions to manipulate files.
-- `completed`: A function that will be invoked when the whole process is finished.Now you can run the generator to generate a new project:
+- `prompts`: Get the prompts for the reply from the current user.
+- `actions`: A series of actions that manipulate files.
+- `completed`: A function that will be executed at the end of the entire process.
+
+Then you can run this Generator to generate a new project:
 
 ```bash
-Sao ../sao-sample new-project
-```
+Sherry ../sherry-sample new-project
+```It's worth noting that if `sherry-config.js` is not found in the Generator, Sherry will use a [default configuration](https://github.com/sherryjs/sherry/blob/master/lib/sherryfile. Fallback.js), which simply copies all the files into the target directory.
 
-Note that if no `saofile.js` was found in the generator, SAO will use a [default one](https://github.com/saojs/sao/blob/master/lib/saofile.fallback.js) which would Simply copy all files into output directory.
+## Access Generator Context
 
-## Access Generator Instance
-
-A [generator instance](../generator-instance.md) will be created from exported object, if you want to access the instance you can use `actions` `prompts` as `function`, the generator instance will be available as `this` in the function:
+A [Generator instance](../generator-instance.md) will be created based on the object exported by the Generator. If you want to access this you can use `actions` and `prompts` as instances of the function, you can use `this` to access it:
 
 ```js
 Module.exports = {
@@ -119,4 +119,4 @@ Module.exports = {
 }
 ```
 
-For a complete list of options in `saofile.js`, please check out [SAO File References](../saofile.md).
+To see all the options supported in `sherry-config.js`, check out [Sherry Generator Config](../generator-config.md).

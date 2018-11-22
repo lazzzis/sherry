@@ -63,6 +63,7 @@ class Sherry {
       )
       this.opts.outDir = process.cwd()
     }
+    return this
   }
 
   /**

@@ -1,22 +1,22 @@
 ---
-Sidebar: auto
+Sidebar: Automatic
 ---
 
 # Generator Instance
 
-You can access generator instance in Sherry Conguration File via `this`.
+You can access the Generator instance in the Sherry file via `this`.
 
-## Properties
+## Attributes
 
 ### answers
 
-- Type: `{[k:string]: any} | undefined`
+- Type: `{{k:string]:any} | undefined`
 
-The answers of prompts. when you access it in `prompts`, it will be `undefined`.
+The answer to the prompt. When you access it in `prompts`, it will be `undefined`.
 
 ### gitUser
 
-- Type: `{name?: string, username?: string, email?: string}`
+- Type: `{name?:string,username?:string,email?:string}`
 
 The global configuration of the git user.
 
@@ -24,19 +24,19 @@ The global configuration of the git user.
 
 - Type: `string`
 
-The absolute path to output directory.
+The absolute path to the output directory.
 
 ### outFolder
 
 - Type: `string`
 
-The folder name of output directory.
+The folder name of the output directory.
 
 ### npmClient
 
-- Type: `'npm' | 'yarn'`
+- Type: `'npm'| 'yarn'`
 
-The npm client.
+Npm client.
 
 ### fs
 
@@ -54,21 +54,21 @@ The npm client.
 
 - Type: [Chalk](https://github.com/chalk/chalk)
 
-## Methods
+## method
 
 ### gitInit
 
-- Type: `() => void`
+- Type: `()=> void`
 
-Run `git init` synchonously in output directory.
+Run `git init` synchronously in the output directory.
 
 ### npmInstall
 
 - Type: `NpmInstall`
 
-Use `npm` or `yarn` to install packages in output directory.
+Use `npm` or `yarn` to install the package in the output directory.
 
-```ts
+```typescript
 Function npmInstall(opts?: InstallOpts): Promise<void>
 
 Interface InstallOpts {
@@ -81,6 +81,6 @@ Interface InstallOpts {
 
 ### showProjectTips
 
-- Type: `() => void`
+- Type: `()=> void`
 
-Display a message for successful project creation.
+A message showing the successful creation of the project.

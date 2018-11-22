@@ -12,8 +12,7 @@ module.exports = ({ generator, checkGenerator, showNotifier }) => {
 }
 
 function performSelfUpdateCheck() {
-  const pkg = require('../../../package')
-
+  const pkg = require('../package')
   const notifier = updateNotifier({ pkg })
 
   if (notifier.update) {
