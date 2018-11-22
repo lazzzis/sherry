@@ -8,7 +8,7 @@ const cli = cac()
 const sherry = require('../lib/index')()
 
 const plugins = [
-  { name: 'list-generators', path: require('path').resolve(__dirname, '../lib/plugins/commands/list-generators') }
+  { name: 'view-generators', path: require('path').resolve(__dirname, '../lib/plugins/commands/view-generators') }
 ]
 
 sherry.setCLI(cli)
