@@ -13,7 +13,8 @@
   },
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
-    "build": "vuepress build docs --temp .temp"
+    "build": "vuepress build docs --temp .temp",
+    "translate": "node scripts/auto-translation.js"
   },
   "keywords": [
     "sherry",

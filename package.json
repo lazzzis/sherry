@@ -10,10 +10,10 @@
     "init-package": "node scripts/init-package.js",
     "dev:docs": "yarn workspace docs dev",
     "build:docs": "yarn workspace docs build",
+    "translate:docs": "yarn workspace docs translate",
     "release": "yarn --pure-lockfile && node scripts/release.js",
     "changelog": "node scripts/genChangelog.js run",
-    "linkGlobalCommand": "lerna exec --scope sherry -- yarn link",
-    "unlinkGlobalCommand": ""
+    "linkGlobalCommand": "lerna exec --scope sherry -- yarn link"
   },
   "devDependencies": {
     "ava": "^0.25.0",
