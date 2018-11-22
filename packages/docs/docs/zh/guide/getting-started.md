@@ -1,72 +1,72 @@
-# Getting Started
+# 快速上手
 
-## Installation
+## 安装
 
-SAO is a CLI library written in JavaScript, so you can install it from npm:
-
-```bash
-npm i -g sao
-```
-
-Alternatively, a lot of you may use Yarn instead:
+Sherry 是一个使用 JavaScript 开发的 CLI，所以你可以通过 npm 来安装它：
 
 ```bash
-yarn global add sao
+npm i -g sherry
 ```
 
-Then try the command `sao` in your terminal, if everything works fine you'd see the CLI usages.
-
-## Using Generators
+或者，如果你使用 Yarn：
 
 ```bash
-sao nm my-project
+yarn global add sherry
 ```
 
-By running this command, SAO will install a generator which in this case is [sao-nm](https://npm.im/sao-nm) from npm, and use it to generate files into `my-project` directory.
+它将会在你的命令行中安装 `sherry` 这个指令，如果一切顺利，你将会看到这个 CLI 的帮助信息。
 
-If you want it to generate into current directoy, just omit the second argument like this: `sao nm`.
+## 使用 Generators
 
-A generator could be one of:
+```bash
+sherry nm my-project
+```
 
-- __Local directory__, e.g. `sao ./path/to/my-generator`
-- __An npm package__, e.g. `sao react` will be package `sao-react`.
-  - To use an npm package that does not follow the `sao-*` naming convention, just prefix the name like this: `sao npm:foo`, then this will use the `foo` package instead of `sao-foo`.
-- __A git repository__, e.g. `sao egoist/sao-nm` will use `github.com/egoist/sao-nm`, you can use following prefixes for other git providers:
+运行这个指令后，Sherry 将会安装一个生成器，在这种情况下是来自 npm 的 [sherry-nm](https://npm.im/sherry-nm)，并使用它生成文件到 `my-project` 目录中。
+
+如果你想让它生成当前目录，只需省略第二个参数：`sherry nm`。
+
+Generator 可以是以下之一：
+
+- __本地目录__, 如: `sherry ./path/to/my-generator`
+- __一个 npm 包__, 如：`sherry react` 将会去拉取 `sherry-react`.
+  - 想要使用一个没有遵循 `sherry-*` 命名规范的 npm 包，只需要像这样加上前缀： `sherry npm:foo`，接着 Sherry 会去拉取  `foo` 而不是 `sherry-foo`。
+- __一个 git 仓库__, 如：`sherry sherry/sherry-nm` 将会是 `github.com/egoist/sherry-nm`, 你可以使用如下的前缀来指定其他的 git 托管服务提供者。
   - `gitlab:` For GitLab.
   - `bitbucket:` For BitBucket.
 
-### Versioning
+### 版本
 
-For npm package, you can use a specific verison of the generator:
+对于 npm 包，你可以使用这个 Generator 的某个指定版本
 
 ```bash
-sao nm@1
-sao nm@0.2
+sherry nm@1
+sherry nm@0.2
 ```
 
-The syntax here is the same as `npm install`.
+这里的语法和 `npm install` 一致。
 
-For git repository, you can use a specific tag, commit or branch of the generator:
+对于 git 仓库，你可以所使用一个具体的 tag、commit 或者某个特定的分支：
 
 ```bash
-sao nm#dev
-sao nm#v1.0.0
+sherry nm#dev
+sherry nm#v1.0.0
 ```
 
 ### Sub-generators
 
-A generator might have sub-generators, you can run them like this:
+一个 Generator 可能包含 sub-generators，你可以像这样运行它们：
 
 ```bash
-sao nm:donate
+sherry nm:donate
 ```
 
-The part after `:` is a sub-generator called `donate`, by running this command SAO will run the sub-generator which will add a `postinstall` script in `package.json` to show donation URL.
+在 `:` 后面的是一个名叫 `donate` 的 sub-generator，通过运行这个指令，Sherry 将会运行这个  sub-generator，它会在 `package.json` 中增加一个 `postinstall` 脚本用于显示捐献 URL。
 
 ::: warning
-Sub-generators are supposed to be running in an existing project, which means the output directory is always current working directory.
+Sub-generators 应该在现有项目中运行，这意味着输出目录始终是当前工作目录。
 :::
 
-### Update Cached Generator
+### 更新已被缓存的 Generator
 
-Once you've run a generator, it will be cached locally in `~/.sao` directory. To run the same generator with an up-to-date version, you can add the `--update` or `-u` flag.
+一旦你运行了一个生成器，它将被本地缓存在 `~/.sherry` 目录中。 要使用最新版本运行一个 Generator，可以添加 `--update` 或 `-u` 标志。

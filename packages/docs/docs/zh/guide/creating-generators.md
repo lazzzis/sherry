@@ -1,15 +1,15 @@
-# Creating Generators
+# 创建 Generators
 
-SAO provides a generator for creating a new generator:
+Sherry 提供了一个用于创建新的 Generator 的 Generator：
 
 ```bash
-sao generator sao-sample
-# Make sure to replace `sao-sample` with your desired generator name
+sherry generator sherry-sample
+# Make sure to replace `sherry-sample` with your desired generator name
 ```
 
-## Folder Structure
+## 目录结构
 
-The basic folder structure is as follows:
+基本文件夹结构如下：
 
 ```bash
 .
@@ -17,7 +17,7 @@ The basic folder structure is as follows:
 ├── README.md
 ├── circle.yml
 ├── package.json
-├── saofile.js
+├── sherryfile.js
 ├── template
 │   ├── LICENSE
 │   ├── README.md
@@ -27,7 +27,7 @@ The basic folder structure is as follows:
 └── yarn.lock # Or package-lock.json if you don't have Yarn on your machine
 ```
 
-📝 __saofile.js__:
+📝 __sherryfile.js__:
 
 ```js
 const superb = require('superb')
@@ -89,21 +89,21 @@ module.exports = {
 }
 ```
 
-- `prompts`: CLI prompts to retrive answers from current user.
-- `actions`: A series of actions to manipulate files.
-- `completed`: A function that will be invoked when the whole process is finished.
+- `prompts`: 从当前用户获取答复的 prompts。
+- `actions`: 操纵文件的一系列动作。
+- `completed`: 一个会在整个流程结束的时候执行的函数。
 
-Now you can run the generator to generate a new project:
+接着你可以运行这个 Generator 来生成一个新项目：
 
 ```bash
-sao ../sao-sample new-project
+sherry ../sherry-sample new-project
 ```
 
-Note that if no `saofile.js` was found in the generator, SAO will use a [default one](https://github.com/saojs/sao/blob/master/lib/saofile.fallback.js) which would simply copy all files into output directory.
+值得注意的是，如果在 Generator 中没有找到 `sherry-config.js` ，Sherry 将会使用一个[默认的配置](https://github.com/sherryjs/sherry/blob/master/lib/sherryfile.fallback.js)，它会简单地将所有文件复制到目标目录中。
 
-## Access Generator Instance
+## 访问 Generator 上下文
 
-A [generator instance](../generator-instance.md) will be created from exported object, if you want to access the instance you can use `actions` `prompts` as `function`, the generator instance will be available as `this` in the function:
+一个 [Generator 实例](../generator-instance.md) 将会根据 Generator 导出的对象来创建，如果你想访问这个你可以 把 `actions` 和 `prompts` 来当成函数使用的实例，你可以使用 `this` 来访问它：
 
 ```js
 module.exports = {
@@ -121,4 +121,5 @@ module.exports = {
 }
 ```
 
-For a complete list of options in `saofile.js`, please check out [SAO File References](../saofile.md).
+想要查看所有 `sherry-config.js` 中支持的选项，请查看 [Sherry Generator Config](../generator-config.md).
+

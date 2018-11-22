@@ -5,10 +5,10 @@ sidebar: auto
 # API
 
 ```js
-const sao = require('sao')
+const sherry = require('sherry')
 
 // Create SAO instance
-const app = sao(options)
+const app = sherry(options)
 ```
 
 ## Options
