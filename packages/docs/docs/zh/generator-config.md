@@ -125,11 +125,11 @@ actions: [
 删除目标目录中的文件。
 
 ```JS
-Actions: [
+actions: [
   {
-    Type: 'remove',
-    Files: '**/*.ts',
-    When: '!useTypescript'
+    type: 'remove',
+    files: '**/*.ts',
+    when: '!useTypescript'
   }
 ]
 ```

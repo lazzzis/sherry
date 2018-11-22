@@ -1,4 +1,4 @@
-#测试 Generator
+# Testing Generator
 
 You can test your generator using any test framework you want to use, such as [AVA](https://ava.li) which we will show later.
 
@@ -12,18 +12,18 @@ Yarn add sherry ava --dev
 Now you can create a `test/test.js` file with the following content:
 
 ```js
-Const test = require('ava')
-Const sao = require('sao')
+const test = require('ava')
+const sao = require('sao')
 
-Const generator = path.join(__dirname)
+const generator = path.join(__dirname)
 
-Test('defaults', async t => {
-  // In unit tests, we skipped the prompts and turned to the mock
-  // If no mock value is provided, Sherry will read the default value of prompt
-Const mockPromptAnswers = { useRouter: true }
-Const stream = await sao.mock({ generator }, mockPromptAnswers)
-// Check that `router.js` is in the generated file
-T.true(stream.fileList.includes('router.js'))
+test('defaults', async t => {
+  // 在单元测试中，我们跳过了 prompts 转而使用 mock 的 answers
+  // 如果没有提供 mock 的值，那么 Sherry 将会读取 prompt 的默认值
+	const mockPromptAnswers = { useRouter: true }
+	const stream = await sao.mock({ generator }, mockPromptAnswers)
+	// 检查 `router.js` 是在在生成的文件中
+	t.true(stream.fileList.includes('router.js'))
 })
 ```
 

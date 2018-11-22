@@ -1,4 +1,4 @@
-#快开始
+# Getting Started
 
 ## Installation
 

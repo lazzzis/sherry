@@ -17,7 +17,7 @@ sherry generator sherry-sample
 ├── README.md
 ├── circle.yml
 ├── package.json
-├── sherryfile.js
+├── sherry-config.js
 ├── template
 │   ├── LICENSE
 │   ├── README.md
@@ -27,7 +27,7 @@ sherry generator sherry-sample
 └── yarn.lock # Or package-lock.json if you don't have Yarn on your machine
 ```
 
-📝 __sherryfile.js__:
+📝 __sherry-config.js__:
 
 ```js
 const superb = require('superb')

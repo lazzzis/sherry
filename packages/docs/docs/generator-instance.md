@@ -69,13 +69,13 @@ Run `git init` synchronously in the output directory.
 Use `npm` or `yarn` to install the package in the output directory.
 
 ```typescript
-Function npmInstall(opts?: InstallOpts): Promise<void>
+function npmInstall(opts?: InstallOpts): Promise<void>
 
-Interface InstallOpts {
-  /* The packages to install, if omited, it will install packages in `package.json` */
-  Package?: string[]
-  /* Install packages as devDependencies, false by default */
-  saveDev?: boolean
+interface InstallOpts {
+  /* The packages to install, if omited, it will install packages in `package.json` */
+  packages?: string[]
+  /* Install packages as devDependencies, false by default */
+  saveDev?: boolean
 }
 ```
 

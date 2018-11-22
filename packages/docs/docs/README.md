@@ -1,6 +1,6 @@
 # Introduction
 
-## Sherry What?
+## What's Sherry?
 
 **Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sao) A new project.
 

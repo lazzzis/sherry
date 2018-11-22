@@ -25,17 +25,17 @@ The `when` attribute in each prompt can also be a string, which will be executed
 E.g:
 
 ```js{10}
-Prompts: [
-  {
-    Name: 'useBundler',
-    Message: 'Do you want a bundler'
-  },
-  {
-    Name: 'bundler',
-    Type: 'list',
-    Choices: ['webpack', 'parcel', 'poi'],
-    When: 'useBundler'
-  }
+prompts: [
+  {
+    name: 'useBundler',
+    message: 'Do you want a bundler'
+  },
+  {
+    name: 'bundler',
+    type: 'list',
+    choices: ['webpack', 'parcel', 'poi'],
+    when: 'useBundler'
+  }
 ]
 ```
 
@@ -66,14 +66,14 @@ __Type__:`Action[]` | `(this: Generator) => Action[] | Promise<Action[]>`
 Add the files in the `template` directory to the target directory.
 
 ```js
-Actions: [
-  {
-    Type: 'add',
-    Files: '**',
-    Filters: {
-      'foo.js': '!someAnswer'
-    }
-  }
+actions: [
+  {
+    type: 'add',
+    files: '**',
+    filters: {
+      'foo.js': '!someAnswer'
+    }
+  }
 ]
 ```
 
@@ -88,15 +88,15 @@ Actions: [
 Modify the files in the target directory.
 
 ```JS
-Actions: [
-  {
-    Type: 'modify',
-    Files: 'package.json',
-    Handler(data, filepath) {
-      Data.main = './foo.js'
-      Return data
-    }
-  }
+actions: [
+  {
+    type: 'modify',
+    files: 'package.json',
+    handler(data, filepath) {
+      data.main = './foo.js'
+      return data
+    }
+  }
 ]
 ```- __files__: One or more glob patterns.
 - __handler__: A function to get the contents of a new file. For `.json`, we automatically parse and string it. Otherwise you will receive the original string.
@@ -106,13 +106,13 @@ Actions: [
 Move the file to the specified directory.
 
 ```js
-Actions: [
-  {
-    Type: 'move',
-    Patterns: {
-      'index-*.js': 'index.js'
-    }
-  }
+actions: [
+  {
+    type: 'move',
+    patterns: {
+      'index-*.js': 'index.js'
+    }
+  }
 ]
 ```
 
@@ -123,12 +123,12 @@ Actions: [
 Delete the files in the target directory.
 
 ```JS
-Actions: [
-{
-Type: 'remove',
-Files: '**/*.ts',
-When: '!useTypescript'
-}
+actions: [
+  {
+    type: 'remove',
+    files: '**/*.ts',
+    when: '!useTypescript'
+  }
 ]
 ```
 
@@ -146,20 +146,20 @@ Working directory for file operations: `add`.
 You can register the child generator with the `subGenerators` option:
 
 ```js
-Module.exports = {
-  subGenerators: [
-    {
-      Name: 'foo',
-      // A path to the generator, relative to sherry-config.js .
-      // A path to the generator, relative to the
-      Generator: './generators/foo'
-    },
-    {
-      Name: 'bar',
-      // Or use an npm package, like `sherry-bar` here.
-      Generator: 'sao-bar'
-    }
-  ]
+module.exports = {
+  subGenerators: [
+    {
+      name: 'foo',
+      // 一个指向 generator 的路径，相对于 sherry-config.js 。
+      // A path to the generator, relative to the 
+      generator: './generators/foo'
+    },
+    {
+      name: 'bar',
+      // 或者使用一个 npm 包，就像这里的 `sherry-bar`
+      generator: 'sao-bar'
+    }
+  ]
 }
 ```
 
@@ -179,16 +179,16 @@ __Type__:`(this: Generator) => Prompt<void> | void`
 Executed before prompts and actions, you can throw an error here to exit the process:
 
 ```js
-Module.exports = {
-  // A generator that needs to have package.json in the output directory to run
-  Async prepare() {
-    Const hasPkg = await this.fs.pathExists(this.resolve('package.json'))
-    If (!hasPkg) {
-      Throw this.createError('Missing package.json')
-      // You can also throw an error directly using throw new Error('...')
-      // just `this.createError` will only display an error message without an error stack
-    }
-  }
+module.exports = {
+  // 一个需要在输出目录有 package.json 才能运行的 generator
+  async prepare() {
+    const hasPkg = await this.fs.pathExists(this.resolve('package.json'))
+    if (!hasPkg) {
+      throw this.createError('Missing package.json')
+      // 你也可以直接使用 throw new Error('...') 来抛出错误
+      // 只是 `this.createError` 仅仅会显示错误信息，而没有错误堆栈
+    }
+  }
 }
 ```
 
@@ -199,11 +199,11 @@ __Type__: `(this: Generator) => Prompt | void`
 Execute after all operations have been completed.
 
 ```js
-Module.exports = {
-  Async completed() {
-    this.gitInit()
-    Await this.npmInstall()
-    this.showCompleteTips()
-  }
+module.exports = {
+  async completed() {
+    this.gitInit()
+    await this.npmInstall()
+    this.showCompleteTips()
+  }
 }
 ```
