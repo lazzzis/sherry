@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const cac = require('cac').default
 const SherryError = require('../lib/SherryError')
+const parseGenerator = require('../lib/parseGenerator')
 
 const cli = cac()
 
@@ -64,16 +65,33 @@ cli.command('set-alias', 'Set an alias for a generator path', input => {
   const store = require('../lib/store')
   const { escapeDots } = require('../lib/utils/common')
   const logger = require('../lib/logger')
+  const chalk = require('chalk')
+  const path = require('path')
+  const cwd = process.cwd()
 
   const name = input[0]
-  const value = input[1]
-  if (!name || !value) {
-    throw new SherryError(
-      `Invalid arguments: sherry set-alias <alias> <generator>`
-    )
+  let value = input[1]
+
+  if (!name) {
+    return console.log(`\n  Usage: ${chalk.cyan('sherry set-alias <alias> <generator-path>')}${chalk.gray('[Default: cwd]')}\n`)
   }
 
+  if (!value) {
+    value = cwd
+  }
+
+  if (!path.isAbsolute(value)) {
+    value = path.resolve(cwd, value)
+  }
+
+  if (!require('fs').existsSync(value)) {
+    return console.log(`  Warn: generator ${chalk.cyan(value)} doesn't exist`)
+  }
+
+  const generator = parseGenerator(value)
+
   store.set(`alias.${escapeDots(name)}`, value)
+  store.set(`generators.${generator.hash}`, generator)
   logger.success(`Added alias '${name}'`)
 })
 
