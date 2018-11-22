@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="https://raw.githubusercontent.com/sherry-lab/sherry/master/.media/new-logo.png" alt="">
+  <img width="100" src="https://raw.githubusercontent.com/sherry/sherry/master/.media/new-logo.png" alt="">
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@ For detailed usage please head to https://sherry.ulivz.org
 
 ## Author
 
- **Sherry** © <img src="https://avatars0.githubusercontent.com/u/45209364?s=14"> [Sherry Lab](https://github.com/sherry-lab), Released under the [MIT](./LICENSE) License.<br>
+ **Sherry** © <img src="https://avatars2.githubusercontent.com/u/45230194?s=14"> [Sherry Team](https://github.com/sherry-lab), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/sherry/contributors)).
 
 
