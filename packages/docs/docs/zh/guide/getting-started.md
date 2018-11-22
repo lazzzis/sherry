@@ -16,7 +16,7 @@ yarn global add sherry
 
 它将会在你的命令行中安装 `sherry` 这个指令，如果一切顺利，你将会看到这个 CLI 的帮助信息。
 
-## 使用 Generators
+## 使用 Generator
 
 ```bash
 sherry nm my-project

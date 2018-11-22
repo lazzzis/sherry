@@ -2,7 +2,7 @@
 侧边栏：自动
 ---
 
-# Generator Instance
+# Generator 实例
 
 您可以通过 `this` 访问 Sherry 文件中的 Generator 实例。
 

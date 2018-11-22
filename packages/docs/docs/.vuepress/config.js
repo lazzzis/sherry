@@ -62,8 +62,7 @@ module.exports = {
               '/guide/getting-started',
               '/guide/creating-generators',
               '/guide/testing-generators',
-              '/guide/sharing-generators',
-              '/guide/migrate-from-v0'
+              '/guide/sharing-generators'
             ]
           }
         ]
@@ -80,34 +79,29 @@ module.exports = {
             link: '/zh/guide/getting-started'
           },
           {
-            text: 'References',
-            items: [
-              {
-                text: 'API',
-                link: '/zh/api'
-              },
-              {
-                text: 'SAO File',
-                link: '/zh/saofile'
-              },
-              {
-                text: 'Generator Instance',
-                link: '/zh/generator-instance'
-              }
-            ]
+            text: 'Generator 配置',
+            link: '/zh/generator-config'
+          },
+          {
+            text: 'Generator 实例',
+            link: '/zh/generator-instance'
+          },
+          {
+            text: 'Node API',
+            link: '/zh/api'
           }
         ],
+
         sidebar: [
           {
-            title: 'Guide',
+            title: '指南',
             collapsable: false,
             children: [
               '/zh/',
               '/zh/guide/getting-started',
-              '/zh/guide/creating-generators',
-              '/zh/guide/testing-generators',
-              '/zh/guide/sharing-generators',
-              '/zh/guide/migrate-from-v0'
+              '/zh/guide/creating-generator',
+              '/zh/guide/testing-generator',
+              '/zh/guide/sharing-generator'
             ]
           }
         ]

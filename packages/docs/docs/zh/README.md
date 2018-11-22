@@ -2,7 +2,7 @@
 
 ## Sherry 是什么?
 
-**Sherry** (['ʃerɪ]) 的原意是一种白葡萄酿制而成的葡萄酒。在这里，Sherry 通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sao) 来帮你快速地启动一个新的项目。
+**Sherry** (['ʃerɪ]) 是一个脚手架工具，它通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sao) 来帮你快速地启动一个新的项目。
 
 ## 为什么不使用 Yeoman?
 
@@ -10,7 +10,7 @@
 
 ## 为什么不使用 SAO?
 
-事实上，Sherry 的创建收到了 SAO 的很多影响，最大的不同在于 Sherry 提供了插件机制，让你能够拓展 Sherry 的功能。尤其是针对企业开发者，将会从中受益。
+SAO 真的很棒，事实上，Sherry 的创建也收到了 SAO 的很多影响，最大的不同在于 Sherry 提供了插件机制，让你能够拓展 Sherry 的功能。尤其是对于企业开发者，你将会非常容易地拓展你想要的功能。
 
 ## 快速浏览
 
@@ -22,7 +22,7 @@ sherry nm my-node-module
 
 通过运行这个命令，Sherry 将尝试找到一个缓存版本的 sherry-nm，如果它还没有被缓存，则会从 npm 下载。然后，Sherry 将会根据生成器中的 `sherry-config.js` 在当前目录下的 my-node-module 目录中生成一个新项目
 
-由于 sherry-nm 也放在在 Github 上，所以你也可以从那里使用生成器：
+由于 sherry-nm 也放在在 Github 上，所以你也可以从 Github 使用这个 Generator：
 
 ```bash
 sherry sherry/sao-nm my-node-module

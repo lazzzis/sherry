@@ -1,4 +1,4 @@
-# 创建 Generators
+# 创建 Generator
 
 Sherry 提供了一个用于创建新的 Generator 的 Generator：
 

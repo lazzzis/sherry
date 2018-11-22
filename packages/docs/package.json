@@ -31,7 +31,7 @@
     "workflow"
   ],
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.23",
+    "vuepress": "^0.14.5",
     "google-translate-cli": "1.0.1",
     "globby": "8.0.1",
     "google-translate-api": "^2.3.0",
