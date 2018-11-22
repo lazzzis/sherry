@@ -14,7 +14,7 @@ In fact, Sherry's creation has received a lot of impact from SAO, the biggest di
 
 ## Quick View
 
-Here we have a Sherry Generator generator for creating a new Node.js module, which is published on npm as [sherry-nm] (https://npm.im/sherry-nm), or in [ Http://github.com/sherry/sherry-nm](http://github.com/sherry/sherry-nm) Find it:
+Here we have a Sherry Generator generator for creating a new Node.js module, which is published on npm as [sherry-nm](https://npm.im/sherry-nm), or in [ Http://github.com/sherry/sherry-nm](http://github.com/sherry/sherry-nm) Find it:
 
 ```bash
 Sherry nm my-node-module
