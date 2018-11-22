@@ -2,7 +2,7 @@ const os = require('os')
 const path = require('path')
 const fs = require('fs-extra')
 const { glob } = require('majo')
-const sherry = require('.')
+const sherry = require('./index')
 
 module.exports = async (
   { generator, getContext, outDir, npmClient },

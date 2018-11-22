@@ -1,7 +1,7 @@
 const { join } = require('path')
 const { readFile, existsSync } = require('fs-extra')
 const tildify = require('tildify')
-const store = require('../store')
+const store = require('../../../store')
 
 async function getGenerators() {
   const packages = []

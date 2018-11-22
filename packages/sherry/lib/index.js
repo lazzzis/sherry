@@ -14,6 +14,7 @@ const SherryError = require('./SherryError')
 const parseGenerator = require('./parseGenerator')
 const updateCheck = require('./updateCheck')
 const store = require('./store')
+const pluginAPI = require('./PluginAPI')
 
 class Sherry {
   /**
@@ -21,6 +22,23 @@ class Sherry {
    * @param {Object} opts
    */
   constructor(opts) {
+    this.logger = logger
+    logger.setOptions(
+      process.argv.includes('--debug') || process.argv.includes('--verbose')
+        ? 4
+        : 1
+    )
+    if (opts) {
+      this.setOptions(opts)
+    }
+  }
+
+  setCLI(cli) {
+    this.cli = cli
+    this.pluginAPI = new pluginAPI(this)
+  }
+
+  setOptions(opts) {
     this.opts = Object.assign({}, opts)
     this.opts.outDir = path.resolve(this.opts.outDir)
     this.opts.npmClient = installPackages.setNpmClient(this.opts.npmClient)
@@ -29,8 +47,8 @@ class Sherry {
       logLevel:
         typeof this.opts.logLevel === 'number'
           ? this.opts.logLevel
-          : this.opts.debug
-            ? 4
+          : this.opts.debug || process.argv.includes('--debug') || process.argv.includes('--verbose')
+          ? 4
             : this.opts.quiet
               ? 1
               : 3
@@ -129,6 +147,14 @@ class Sherry {
 
     if (!this.opts.mock && config.completed) {
       await config.completed.call(generatorContext, generatorContext)
+    }
+  }
+
+  applyPlugins(plugins) {
+    for (const {name, path} of plugins) {
+      logger.debug(`Apply plugin: ${name}`)
+      const pluginFn = require(path)
+      pluginFn(this.pluginAPI)
     }
   }
 }

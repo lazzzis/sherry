@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 const cac = require('cac').default
 const SherryError = require('../lib/SherryError')
-const getGenerators = require('../lib/utils/getGenerators')
-const printGenerators = require('../lib/utils/printGenerators')
 
 const cli = cac()
+
+const sherry = require('../lib/index')()
+
+const plugins = [
+  { name: 'list-generators', path: require('path').resolve(__dirname, '../lib/plugins/commands/list-generators') }
+]
+
+sherry.setCLI(cli)
+sherry.applyPlugins(plugins)
 
 cli
   .command(
@@ -27,7 +34,7 @@ cli
         return cli.showHelp()
       }
 
-      return require('../')(options).run()
+      return sherry.setOptions(options).run()
     }
   )
   .option('npm-client', {
@@ -77,13 +84,8 @@ cli.command('get-alias', 'Get the generator for an alias', input => {
   console.log(store.get(`alias.${escapeDots(input[0])}`))
 })
 
-cli.command('list-generators', 'List installed generators', async () => {
-  const generators = await getGenerators()
-  return printGenerators(generators)
-})
-
 cli.on('error', error => {
-  return require('..').handleError(error)
+  return require('../lib/index').handleError(error)
 })
 
 cli.parse()

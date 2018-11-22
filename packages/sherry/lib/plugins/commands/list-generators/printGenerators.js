@@ -1,7 +1,7 @@
 const chalk = require('chalk')
 const table = require('text-table')
 const tildify = require('tildify')
-const { repoPath, packagePath } = require('../paths')
+const { repoPath, packagePath } = require('../../../paths')
 
 function printGenerators({ packages, repos, locals }) {
   console.log(
