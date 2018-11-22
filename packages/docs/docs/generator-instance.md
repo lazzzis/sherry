@@ -4,7 +4,7 @@ Sidebar: auto
 
 # Generator Instance
 
-You can access generator instance in SAO File via `this`.
+You can access generator instance in Sherry Conguration File via `this`.
 
 ## Properties
 

@@ -1,74 +1,74 @@
 ---
-sidebar: auto
+侧边栏：自动
 ---
 
 # Generator Instance
 
-You can access generator instance in SAO File via `this`.
+您可以通过 `this` 访问 Sherry 文件中的 Generator 实例。
 
-## Properties
+## 属性
 
 ### answers
 
-- Type: `{[k:string]: any} | undefined`
+- 类型：`{{k：string]：any} | undefined`
 
-The answers of prompts. when you access it in `prompts`, it will be `undefined`.
+提示的答案。当你在`prompts`中访问它时，它将是 `undefined`。
 
 ### gitUser
 
-- Type: `{name?: string, username?: string, email?: string}`
+- 类型：`{name?：string，username?：string，email?：string}`
 
-The global configuration of the git user.
+git 用户的全局配置。
 
 ### outDir
 
-- Type: `string`
+- 类型：`string`
 
-The absolute path to output directory.
+输出目录的绝对路径。
 
 ### outFolder
 
-- Type: `string`
+- 类型：`string`
 
-The folder name of output directory.
+输出目录的文件夹名称。
 
 ### npmClient
 
-- Type: `'npm' | 'yarn'`
+- 类型：`'npm'| 'yarn'`
 
-The npm client.
+npm 客户端。
 
 ### fs
 
-- Type: [fs-extra](https://github.com/jprichardson/node-fs-extra)
+- 类型：[fs-extra](https://github.com/jprichardson/node-fs-extra)
 
 ### logger
 
-- Type: [Logger](https://github.com/saojs/sao/blob/master/lib/logger.js)
+- 类型：[Logger](https://github.com/saojs/sao/blob/master/lib/logger.js)
 
 ### spinner
 
-- Type: [Ora](https://github.com/sindresorhus/ora)
+- 类型：[Ora](https://github.com/sindresorhus/ora)
 
 ### chalk
 
-- Type: [Chalk](https://github.com/chalk/chalk)
+- 类型：[Chalk](https://github.com/chalk/chalk)
 
-## Methods
+## 方法
 
 ### gitInit
 
-- Type: `() => void`
+- 类型：`()=> void`
 
-Run `git init` synchonously in output directory.
+在输出目录中同步运行 `git init`。
 
 ### npmInstall
 
-- Type: `NpmInstall`
+- 类型：`NpmInstall`
 
-Use `npm` or `yarn` to install packages in output directory.
+使用 `npm` 或 `yarn` 在输出目录中安装包。
 
-```ts
+```typescript
 function npmInstall(opts?: InstallOpts): Promise<void>
 
 interface InstallOpts {
@@ -81,6 +81,6 @@ interface InstallOpts {
 
 ### showProjectTips
 
-- Type: `() => void`
+- 类型：`()=> void`
 
-Display a message for successful project creation.
+显示成功创建项目的消息。
