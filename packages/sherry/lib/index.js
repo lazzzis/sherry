@@ -194,7 +194,7 @@ function downloadRepo(repo, target, opts) {
  * @param {Object} generator
  * @param {Object} options
  */
-async function ensureRepo(generator, { update, clone, registry, gitServer }) {
+async function ensureRepo(generator, { update, gitClone, registry, gitServer }) {
   if (!update && (await fs.pathExists(generator.path))) {
     return
   }
@@ -202,7 +202,7 @@ async function ensureRepo(generator, { update, clone, registry, gitServer }) {
   // Download repo
   spinner.start('Downloading repo')
   try {
-    await downloadRepo(generator.slug, generator.path, { clone, gitServer })
+    await downloadRepo(generator.slug, generator.path, { clone: gitClone, gitServer })
     spinner.stop()
     logger.success('Downloaded repo')
   } catch (err) {

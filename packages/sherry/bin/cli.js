@@ -61,11 +61,6 @@ cli
     type: 'boolean',
     alias: 'u'
   })
-  .option('clone', {
-    desc: 'Clone repository instead of archive download',
-    type: 'boolean',
-    alias: 'c'
-  })
   .option('yes', {
     desc: 'Use the default options',
     alias: 'y'
@@ -73,6 +68,11 @@ cli
   .option('registry', {
     desc: 'Use a custom registry for npm and yarn',
     type: 'string'
+  })
+  .option('git-clone', {
+    desc: 'Clone repository instead of archive download',
+    type: 'boolean',
+    alias: 'c'
   })
   .option('git-server', {
     desc: 'Use a custom git server for pulling generators in git',
