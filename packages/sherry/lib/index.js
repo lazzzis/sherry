@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs-extra')
 const chalk = require('chalk')
-const downloadGitRepo = require('download-git-repo')
+const downloadGitRepo = require('./downloadGitRepo')
 const resolveFrom = require('resolve-from')
 const loadConfig = require('./loadConfig')
 const paths = require('./paths')
@@ -194,7 +194,7 @@ function downloadRepo(repo, target, opts) {
  * @param {Object} generator
  * @param {Object} options
  */
-async function ensureRepo(generator, { update, clone, registry }) {
+async function ensureRepo(generator, { update, clone, registry, gitServer }) {
   if (!update && (await fs.pathExists(generator.path))) {
     return
   }
@@ -202,7 +202,7 @@ async function ensureRepo(generator, { update, clone, registry }) {
   // Download repo
   spinner.start('Downloading repo')
   try {
-    await downloadRepo(generator.slug, generator.path, { clone })
+    await downloadRepo(generator.slug, generator.path, { clone, gitServer })
     spinner.stop()
     logger.success('Downloaded repo')
   } catch (err) {

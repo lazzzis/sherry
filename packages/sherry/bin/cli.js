@@ -60,6 +60,10 @@ cli
     desc: 'Use a custom registry for npm and yarn',
     type: 'string'
   })
+  .option('git-server', {
+    desc: 'Use a custom git server for pulling generators in git',
+    type: 'string'
+  })
 
 cli.command('set-alias', 'Set an alias for a generator path', input => {
   const store = require('../lib/store')
