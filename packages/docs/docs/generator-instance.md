@@ -44,7 +44,7 @@ Npm client.
 
 ### logger
 
-- Type: [Logger](https://github.com/saojs/sao/blob/master/lib/logger.js)
+- Type: [Logger](https://github.com/sherry/sherry/blob/master/lib/logger.js)
 
 ### spinner
 

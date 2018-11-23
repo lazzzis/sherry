@@ -7,7 +7,7 @@ Sidebar: auto
 ```js
 const sherry = require('sherry')
 
-// Create SAO instance
+// Create Sherry instance
 const app = sherry(options)
 ```
 

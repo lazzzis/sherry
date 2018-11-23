@@ -157,7 +157,7 @@ module.exports = {
     {
       name: 'bar',
       // 或者使用一个 npm 包，就像这里的 `sherry-bar`
-      generator: 'sao-bar'
+      generator: 'sherry-bar'
     }
   ]
 }

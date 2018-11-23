@@ -2,7 +2,7 @@
 
 ## Sherry 是什么?
 
-**Sherry** (['ʃerɪ]) 是一个脚手架工具，它通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sao) 来帮你快速地启动一个新的项目。
+**Sherry** (['ʃerɪ]) 是一个脚手架工具，它通过现有的或者你自己创建的 [generators](https://github.com/sherry/awesome-sherry) 来帮你快速地启动一个新的项目。
 
 ## 为什么不使用 Yeoman?
 
@@ -25,5 +25,5 @@ sherry nm my-node-module
 由于 sherry-nm 也放在在 Github 上，所以你也可以从 Github 使用这个 Generator：
 
 ```bash
-sherry sherry/sao-nm my-node-module
+sherry sherry/sherry-nm my-node-module
 ```

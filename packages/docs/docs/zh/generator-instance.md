@@ -44,7 +44,7 @@ npm 客户端。
 
 ### logger
 
-- 类型：[Logger](https://github.com/saojs/sao/blob/master/lib/logger.js)
+- 类型：[Logger](https://github.com/sherry/sherry/blob/master/lib/logger.js)
 
 ### spinner
 

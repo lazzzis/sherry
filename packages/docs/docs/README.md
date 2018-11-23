@@ -2,7 +2,7 @@
 
 ## What's Sherry?
 
-**Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sao) A new project.
+**Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sherry) A new project.
 
 ## Why not use Yeoman?
 
@@ -25,5 +25,5 @@ By running this command, Sherry will try to find a cached version of sherry-nm, 
 Since sherry-nm is also placed on Github, you can also use this generator from Github:
 
 ```bash
-Sherry sherry/sao-nm my-node-module
+Sherry sherry/sherry-nm my-node-module
 ```
