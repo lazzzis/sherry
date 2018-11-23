@@ -102,8 +102,8 @@ const release = async () => {
 
   const releaseArguments = [
     'publish',
-    '--repo-version',
     version,
+    '--git-tag-version',
     '--force-publish',
     '--npm-tag',
     npmTag,
@@ -112,7 +112,7 @@ const release = async () => {
 
   console.log(`lerna ${releaseArguments.join(' ')}`)
 
-  await execa(require.resolve('lerna/bin/lerna'), releaseArguments, { stdio: 'inherit' })
+  await execa(require.resolve('lerna/cli.js'), releaseArguments, { stdio: 'inherit' })
 
   // Disable changelog in alpha stage.
   // require('./genChangelog')(version)
