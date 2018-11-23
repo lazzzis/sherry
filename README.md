@@ -32,7 +32,7 @@ sherry ulviz/sherry-nm my-module
 sherry nm my-module
 ```
 
-For detailed usage please head to https://sherry.ulivz.org
+For detailed usage please head to https://www.sherryjs.org
 
 ## Contributing
 
