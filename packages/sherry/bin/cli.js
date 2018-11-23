@@ -2,6 +2,7 @@
 const cac = require('cac').default
 const SherryError = require('../lib/SherryError')
 const parseGenerator = require('../lib/parseGenerator')
+const inquirer = require('inquirer')
 
 const cli = cac()
 
@@ -22,6 +23,19 @@ cli
       alias: 'run'
     },
     async (input, flags) => {
+      const [generator, outDir] = input
+      if (!outDir) {
+        const { continueGenerate } = await inquirer.prompt({
+          name: 'continueGenerate',
+          message: 'Are you sure you want to create a new project in the current directory?',
+          choices: ['Y', 'N'],
+          type: 'list',
+          default: 'Y'
+        })
+        if (continueGenerate === 'N') {
+          return console.log(`Cancelled\n`)
+        }
+      }
       const options = Object.assign(
         {
           generator: input[0],
