@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "docs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "docs for Sherry",
   "main": "index.js",
   "publishConfig": {
@@ -31,13 +31,13 @@
     "workflow"
   ],
   "devDependencies": {
-    "vuepress": "^0.14.5",
-    "google-translate-cli": "1.0.1",
+    "chinese-random-ip": "^0.0.5",
     "globby": "8.0.1",
     "google-translate-api": "^2.3.0",
+    "google-translate-cli": "1.0.1",
     "random-useragent": "^0.3.1",
-    "chinese-random-ip": "^0.0.5",
-    "translate-api": "^0.3.12"
+    "translate-api": "^0.3.12",
+    "vuepress": "^0.14.5"
   },
   "author": "ULIVZ <chl814@foxmail.com>",
   "license": "MIT",
