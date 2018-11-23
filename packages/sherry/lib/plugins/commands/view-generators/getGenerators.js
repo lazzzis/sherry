@@ -10,6 +10,13 @@ async function getGenerators() {
 
   const { generators = {}, alias = {} } = store.store
 
+  locals.push(...Object.keys(alias).map(k => {
+    return {
+      alias: k,
+      path: alias[k]
+    }
+  }))
+
   await Promise.all([
     ...Object.keys(generators).map(async hash => {
       const { type, slug, name, path } = generators[hash]
@@ -21,8 +28,6 @@ async function getGenerators() {
         packages.push({ name, version })
       } else if (type === 'repo') {
         repos.push({ name: slug, version })
-      } else if (type === 'local') {
-        locals.push({ path: tildify(path), alias: getAlias(alias, path) })
       }
     })
   ])
