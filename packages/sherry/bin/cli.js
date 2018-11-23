@@ -38,8 +38,8 @@ cli
       }
       const options = Object.assign(
         {
-          generator: input[0],
-          outDir: input[1] || '.',
+          generator,
+          outDir: outDir || '.',
           updateCheck: true
         },
         flags
