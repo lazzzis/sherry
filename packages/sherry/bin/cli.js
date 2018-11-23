@@ -102,6 +102,23 @@ cli.command('get-alias', 'Get the generator for an alias', input => {
   console.log(store.get(`alias.${escapeDots(input[0])}`))
 })
 
+cli.command('remove-alias', 'Remove the generator for an alias', input => {
+  const store = require('../lib/store')
+  const { escapeDots } = require('../lib/utils/common')
+  const chalk = require('chalk')
+  const logger = require('../lib/logger')
+
+  const [alias] = input
+  const key = `alias.${escapeDots(alias)}`
+  const target = store.get(key)
+  if (!target) {
+    return console.log(`  Warn: generator alias ${chalk.cyan(alias)} doesn't exist`)
+  }
+
+  store.delete(key)
+  logger.success(`Deleted alias '${alias}'`)
+})
+
 cli.command('view-cache', 'Display currentcache', input => {
   const store = require('../lib/store')
 
