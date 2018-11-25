@@ -12,7 +12,7 @@
     "build:docs": "yarn workspace docs build",
     "translate:docs": "yarn workspace docs translate",
     "release": "yarn --pure-lockfile && node scripts/release.js",
-    "changelog": "node scripts/genChangelog.js run",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "linkGlobalCommand": "lerna exec --scope sherry -- yarn link"
   },
   "devDependencies": {
