@@ -2,11 +2,11 @@
 
 ## What's Sherry?
 
-**Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sherry) A new project.
+**Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sherry) to start a new project.
 
 ## Why not use Yeoman?
 
-[Yeoman](http://yeoman.io/) Great, but writing the Yeoman generator is time consuming, and I created Sherry to simplify the way I write and use the Generator.
+[Yeoman](http://yeoman.io/) is great, but writing the Yeoman generator is time consuming, and I created Sherry to simplify the way I write and use the Generator.
 
 ## Why not use SAO?
 

@@ -9,7 +9,7 @@
 
 ## Motivation
 
-**Sherry** (Spanish: Jerez \[xeˈɾeθ\], Chinese: 雪莉) is a fortified wine made from white grapes that are grown near the city of Jerez de la Frontera in Andalusia, Spain.
+**Sherry** (['ʃerɪ]) is a scaffolding tool that helps you get started quickly with existing or your own created [generators](https://github.com/sherry/awesome-sherry) to start a new project.
 
 **Sherry** is compatible with:
 
@@ -27,7 +27,7 @@ yarn global add sherry
 
 # An official generator for creating a Node.js project
 # Generate from git repo
-sherry ulviz/sherry-nm my-module
+sherry sherry/sherry-nm my-module
 # Or from npm package (npm.im/sherry-nm)
 sherry nm my-module
 ```
@@ -44,7 +44,7 @@ For detailed usage please head to https://www.sherryjs.org
 
 ## Author
 
- **Sherry** © <img src="https://avatars2.githubusercontent.com/u/45230194?s=14"> [Sherry Team](https://github.com/sherry-lab), Released under the [MIT](./LICENSE) License.<br>
+ **Sherry** © <img src="https://avatars2.githubusercontent.com/u/45230194?s=14"> [Sherry Team](https://github.com/sherry), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/sherry/contributors)).
 
 
