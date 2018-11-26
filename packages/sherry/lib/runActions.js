@@ -59,11 +59,27 @@ module.exports = async (config, context) => {
             fileList = matcher.not(fileList, action.transformExclude)
           }
 
+          const modulePaths = [context.generator.path, ...module.paths]
+          const transformerName = config.transformer || 'ejs'
+          let transformerPath
+          try {
+            transformerPath = require.resolve(
+              `jstransformer-${transformerName}`,
+              {
+                paths: modulePaths
+              }
+            )
+          } catch (e) {
+            throw new Error(`Cannot resolve transfomer: ${transformerName}`)
+          }
+
+          const transformer = require('jstransformer')(
+            require(transformerPath)
+          )
+
           fileList.forEach(relativePath => {
             const contents = files[relativePath].contents.toString()
-            const transformer = require('jstransformer')(
-              require(`jstransformer-${config.transformer || 'ejs'}`)
-            )
+
             stream.writeContents(
               relativePath,
               transformer.render(
