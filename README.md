@@ -42,10 +42,8 @@ For detailed usage please head to https://www.sherryjs.org
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Author
-
- **Sherry** © <img src="https://avatars2.githubusercontent.com/u/45230194?s=14"> [Sherry Team](https://github.com/sherry), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/sherry/contributors)).
-
-
-
+## License                                    
+                                              
+[MIT](./LICENSE)                              
+                                              
+Copyright (c) 2018-present, ULIVZ & SHERRY
