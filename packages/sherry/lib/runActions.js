@@ -113,7 +113,7 @@ module.exports = async (config, context) => {
             if (isJson) {
               contents = JSON.parse(contents)
             }
-            let result = await action.handler(contents, relativePath)
+            let result = await action.handler.call(context, contents, relativePath)
             if (isJson) {
               result = JSON.stringify(result, null, 2)
             }
