@@ -44,6 +44,7 @@ module.exports = async (config, context) => {
         typeof action.transform === 'boolean'
           ? action.transform
           : config.transform !== false
+
       if (shouldTransform) {
         stream.use(({ files }) => {
           let fileList = Object.keys(stream.files)
@@ -79,7 +80,11 @@ module.exports = async (config, context) => {
       stream.on('write', (_, targetPath) => {
         logger.fileAction('magenta', 'Created', targetPath)
       })
-      await stream.dest(context.outDir)
+
+      const target = action.target || config.target || '.'
+      const outDir = path.resolve(context.outDir, target)
+      logger.debug('add_action_outDir', outDir)
+      await stream.dest(outDir)
     } else if (action.type === 'modify' && action.handler) {
       const stream = majo()
       stream.source(action.files, { baseDir: context.outDir })
