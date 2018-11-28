@@ -37,7 +37,7 @@ The Generator can be one of the following:
 
 <TerminalDemo url="/images/demo.gif"/>
 
-###版
+### Version
 
 For the npm package, you can use a specific version of this Generator
 
